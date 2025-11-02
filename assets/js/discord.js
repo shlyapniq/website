@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("API Response:", data); // Debug: log the response
 
             // Set profile picture
-            const avatarUrl = data.avatar ? data.avatar.link : './assets/pfp/default.jpg';
+            const avatarUrl = data.avatar ? data.avatar.link : './assets/pfp/default.png';
             profilePicture.src = avatarUrl;
 
             // Set avatar frame if available

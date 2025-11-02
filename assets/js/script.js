@@ -13,6 +13,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (terminalText) { terminalText.textContent = "Press Enter To Continue"; }
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const v = document.getElementById('myVideo');
+    if (!v) return;
+    // Гарантируем inline-воспроизведение на мобильных (iOS/Android)
+    v.muted = true;
+    v.playsInline = true;
+    v.webkitPlaysInline = true;
+    v.setAttribute('playsinline', '');
+    v.setAttribute('webkit-playsinline', '');
+    v.setAttribute('muted', '');
+
+    // Попытка запустить видео программно (чтобы обойти блокировки)
+    const p = v.play();
+    if (p && p.catch) p.catch(() => { /* silent */ });
+  });
 
     const videoBg = document.getElementById('video-background');
 

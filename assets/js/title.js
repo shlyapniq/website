@@ -9,7 +9,7 @@ var titles = [
   "@shlyap",
   "@shlyapn",
   "@shlyapni",
-  "@shlyapnq",
+  "@shlyapniq",
 ];
 
 // Function to change the title periodically
@@ -22,7 +22,7 @@ function changeTitle() {
       document.title = titles[index];
       // Increment the index and use modulo operator to ensure it stays within the bounds of the array
       index = (index + 1) % titles.length;
-  }, 1000); // Interval set to 1000 milliseconds (1 second)
+  }, 500); // Interval set to 1000 milliseconds (1 second)
 }
 
 // Call the function to start changing the title
